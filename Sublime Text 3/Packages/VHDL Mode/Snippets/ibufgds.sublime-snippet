@@ -1,0 +1,14 @@
+<snippet>
+	<description>ibufgds</description>
+	<content><![CDATA[
+${1:Inst_ibufds} : IBUFGDS
+	port map (
+		I  => ${2:data_in}p(${4:0}),
+		IB => ${2}n(${4}),
+		O  => ${3:s_data_in}(${4})
+	);              
+$0
+]]></content>
+	<tabTrigger>ibufgds</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

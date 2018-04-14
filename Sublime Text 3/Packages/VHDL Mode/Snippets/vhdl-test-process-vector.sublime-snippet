@@ -1,0 +1,11 @@
+<snippet>
+	<description>testbench std_logic_vector</description>
+	<content><![CDATA[
+Process begin
+  ${1:data_in} <= conv_std_logic_vector(${5:0},${4:16}); wait for ${3:1}*${2:clk_period};   
+  $1 <= conv_std_logic_vector(1,$4); wait for $3*$2;
+end process;
+]]></content>
+	<tabTrigger>testvector</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

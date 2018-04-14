@@ -1,0 +1,10 @@
+<snippet>
+	<description>signal std_logic</description>
+    <content><![CDATA[
+signal ${1:s_flag} : std_logic:='${2:0}';
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>sstd</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.vhdl</scope>
+</snippet>

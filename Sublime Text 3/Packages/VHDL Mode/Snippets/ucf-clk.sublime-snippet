@@ -1,0 +1,14 @@
+<snippet>
+	<description>clk TIMESPEC</description>
+	<content><![CDATA[
+NET "${1:clk_40}" TNM_NET = "${1}";
+TIMESPEC TS_${1} = PERIOD "${1}" ${2:40} MHz HIGH 50 %;
+
+NET "${1}" LOC = ${3:R33};   # clk pin
+NET "${1}" IOSTANDARD = LVCMOS18; # 1.8V 
+
+$0
+]]></content>
+	<tabTrigger>clk</tabTrigger>	
+	<scope>source.tcl</scope>
+</snippet>

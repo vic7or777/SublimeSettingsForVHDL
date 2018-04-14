@@ -1,0 +1,11 @@
+<snippet>
+	<description>signal integer</description>
+    <content><![CDATA[
+signal ${1:count} : integer := ${2:0};
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>sint</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.vhdl</scope>
+
+</snippet>

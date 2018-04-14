@@ -1,0 +1,9 @@
+<snippet>
+	<description>net</description>
+	<content><![CDATA[
+NET "${1:data[0]}"  LOC =${2:P24} | IOSTANDARD = LVCMOS${3:18};
+$0
+]]></content>
+	<tabTrigger>net</tabTrigger>
+	<scope>source.tcl</scope>
+</snippet>

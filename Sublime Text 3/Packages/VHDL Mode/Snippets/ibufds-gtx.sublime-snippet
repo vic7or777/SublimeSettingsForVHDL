@@ -1,0 +1,16 @@
+<snippet>
+	<description>ibufds gtxe1 tranceivers</description>
+	<content><![CDATA[
+${1:Inst_ibufdsgtx} : IBUFDS_GTXE1
+	port map(
+		I     => ${2:GTXQ3_}P,
+		IB    => ${2}N,
+		CEB   => '0',
+		O     => ${3:s_GT_REFCLK1},
+		ODIV2 => OPEN
+	);	           
+$0
+]]></content>
+	<tabTrigger>ibufdsgtx</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

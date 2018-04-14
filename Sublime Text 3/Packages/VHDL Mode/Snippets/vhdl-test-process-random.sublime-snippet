@@ -1,0 +1,24 @@
+<snippet>
+    <description>testbench random</description>
+	<content><![CDATA[
+-- testbench random data
+-- USE ieee.math_real.ALL;
+
+signal rand_num1 : integer:=0;
+signal rand_num2 : integer:=0;
+
+Rand_proc:Process 
+    variable seed1, seed2 : positive;
+    variable rand : real; --random real-number
+    variable range_of_rand : real := ${1:100}.0;
+begin
+    uniform(seed1,seed2, rand);  -- genarate random 0 - range_of_rand   
+    rand_num1 <= integer(rand * range_of_rand);
+    uniform(seed1,seed2, rand);  -- genarate random 0 - range_of_rand   
+    rand_num2 <= integer(rand * range_of_rand); 
+    wait for ${3:1}*${2:clk_period}; 
+end process Rand_proc;
+]]></content>
+	<tabTrigger>testrand</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

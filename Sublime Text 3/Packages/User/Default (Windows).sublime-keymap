@@ -1,0 +1,11 @@
+[
+	{ "keys": ["ctrl+keypad_divide"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+keypad_divide"], "command": "toggle_comment", "args": { "block": true } },
+	{ "keys": ["ctrl+shift+/"], "command": "reopen", "args": {"encoding": "Cyrillic (Windows 1251)"} },
+	{"keys": ["alt+k", "c", "p"], "command": "vhdl_mode_copy_ports",         "context": [{"key": "selector", "operand": "source.vhdl"}] },
+	{"keys": ["alt+k", "c", "s"], "command": "vhdl_mode_copy_subprogram",      "context": [{"key": "selector", "operand": "source.vhdl"}] },
+    {"keys": ["alt+k", "f"], "command": "vhdl_mode_beautify_buffer",       "context": [{"key": "selector", "operand": "source.vhdl"}] },
+    {"keys": ["alt+k", "p", "h"], "command": "vhdl_mode_insert_header", "context": [{"key": "selector", "operand": "source.vhdl"}] },
+    {"keys": ["alt+k", "p", "z"], "command": "paste_as_process",    "context": [{"key": "selector", "operand": "source.vhdl"}] },
+
+]

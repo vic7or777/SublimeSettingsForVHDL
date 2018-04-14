@@ -1,0 +1,13 @@
+<snippet>
+  <tabTrigger>procclk</tabTrigger>
+  <scope>source.vhdl</scope>
+  <content><![CDATA[
+${1:<PROCESS_NAME>} : Process(${2:clk}, ${3:data_in})
+begin
+  if($2'event and $2 = '1') then
+    $0
+  end if;--$2
+end process $1;
+]]></content>
+  <description>process clk</description>
+</snippet>

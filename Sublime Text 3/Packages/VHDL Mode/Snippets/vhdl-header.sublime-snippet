@@ -1,0 +1,49 @@
+<snippet>
+	<!--
+		Current fields supported:
+			PROJECT  : 'vhdl-project-name' in settings.
+			FILENAME : Will fill in the current buffer name if found, if not
+			           found, will fill in the file name, and if that's not
+			           found will fill in a default value.
+			AUTHOR   : 'vhdl-user' in settings.
+			COMPANY  : 'vhdl-company' in settings.
+			CDATE    : Automatically filled in when the header is created.
+			MDATE    : Automatically filled in when the header is created and
+			           updated when file is saved.  Note that this field
+			           is created from beginning of line using the
+			           'vhdl-modified-time-string' settings in user or
+			           project settings.
+			YEAR     : Automatically filled in when the header is created.
+			PLATFORM : 'vhdl-platform' in settings.
+			STANDARD : 'vhdl-standard' in settings.
+			COPYRIGHT_BLOCK : (Optional).  Use of this block is selected by
+			           setting 'vhdl-use-copyright-block' to true in either
+			           user or project settings.  This field will be inserted
+			           at snippet instantiation.
+			REVISION_BLOCK: (Optional).  Use of this block is selected by
+			           setting 'vhdl-use-revision-block' to true in either
+			           user or project settings.  This field will be inserted
+			           at snippet instantiation.
+
+		Numeric fields are tabbed between when snippet is inserted.
+	-->
+	<content><![CDATA[
+-------------------------------------------------------------------------------
+-- Title       : ${1:<Title Block>}
+-- Project     : ${PROJECT}
+-------------------------------------------------------------------------------
+-- File        : ${FILENAME}
+-- Author      : ${AUTHOR}
+-- Company     : ${COMPANY}
+-- Created     : ${CDATE}
+${MODIFIED_TIME_STRING}
+-- Platform    : ${PLATFORM}
+-------------------------------------------------------------------------------${COPYRIGHT_BLOCK}
+-- Description: $2
+-------------------------------------------------------------------------------${REVISION_BLOCK}
+
+$0
+]]></content>
+	<tabTrigger>header</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

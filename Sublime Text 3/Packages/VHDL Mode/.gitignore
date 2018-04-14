@@ -1,0 +1,12 @@
+
+*.sublime-project
+
+*.sublime-workspace
+
+README\.html
+
+
+
+CODE_OF_CONDUCT\.html
+
+CONTRIBUTING\.html

@@ -1,0 +1,58 @@
+<snippet>
+    <description>testbench file</description>
+	<content><![CDATA[
+-- =====================================================================
+------ read file ------------
+-- DATA.txt = 
+-- 1
+-- 2
+-- 3
+-- 4
+-- и т.д.
+-----------------------------
+-- use ieee.std_logic_arith.ALL; -- conv_std_logic_vector(data_in, bits_width)
+-- use std.textio.all;           -- file, string
+
+read_from_file: process(${1:clk}) 
+    constant File_name : STRING := "${2:DATA}.txt";  
+    constant Bit_width : integer:= ${3:8};
+
+    variable Indata_line: line; 
+    variable Indata: integer;   
+    file Input_data_file: text open read_mode is File_name;     
+begin 
+    if rising_edge($1) then 
+        readline(Input_data_file, Indata_line); 
+        read(Indata_line, Indata); 
+    
+        data_in <= conv_std_logic_vector(Indata, Bit_width);  -- Read data
+        
+        if endfile(Input_data_file) then 
+            report "end of file -- looping back to start of file"; 
+            file_close(Input_data_file); 
+            file_open(Input_data_file, File_name); 
+        end if; 
+    end if; 
+end process; 
+
+
+write_to_file: process($1)    
+    constant File_name : STRING := "${4:vhdl_output}.txt";
+
+    variable outdata_line: line; 
+    variable outdata: integer :=0; 
+    file output_data_file: text open write_mode is File_name; 
+begin 
+    if rising_edge($1) then     
+        outdata := CONV_INTEGER(data_out); -- file data =   Unsigned! 
+        
+        write(outdata_line,outdata); 
+        writeline(output_data_file,outdata_line); 
+    end if; 
+end process;  
+-- =====================================================================
+
+]]></content>
+	<tabTrigger>testfile</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

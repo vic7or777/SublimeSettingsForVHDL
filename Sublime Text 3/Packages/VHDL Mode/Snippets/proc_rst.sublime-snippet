@@ -1,0 +1,17 @@
+<snippet>
+  <description>process rst</description>
+  <content><![CDATA[
+${1:<PROCESS_NAME>} : Process(${2:clk}, ${3:rst}, ${4:data_in}) 
+begin
+  if($2'event and $2 = '1') then
+    if($3 = '1') then    
+  		${5}	
+    else then -- $3 = 0
+        $0
+    end if; -- $4
+  end if;--$2
+end process $1;
+]]></content>
+  <tabTrigger>procrst</tabTrigger>
+  <scope>source.vhdl</scope>
+</snippet>

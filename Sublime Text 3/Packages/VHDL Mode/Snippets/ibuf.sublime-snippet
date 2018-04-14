@@ -1,0 +1,13 @@
+<snippet>
+	<description>ibuf</description>
+	<content><![CDATA[
+${1:Inst_ibuf} : IBUF
+	port map (    
+		I => ${2:data_in},    	
+        O => ${3:s_data_out}
+    );             
+$0
+]]></content>
+	<tabTrigger>ibuf</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

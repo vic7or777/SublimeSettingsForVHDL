@@ -1,0 +1,45 @@
+<snippet>
+	<description>generic help table</description>
+	<content><![CDATA[
+-- ***************************************************************************
+-- описание Generic в файлах проекта vhdl
+-- ============================ топ модуль ============================
+--entity top_module is
+--Generic(
+        --constant g_depth_bram         : integer   := 4094;    
+        --constant g_width_addr_bram    : integer   := 12   
+        --);
+        
+--Port (...);
+----------------------------------------------------------------------------------
+--COMPONENT my_module
+    --Generic(        
+        --constant g_component_depth_bram         : integer;     
+        --constant g_component_width_addr_bram    : integer 		
+    --);
+    --PORT(. . .);
+----------------------------------------------------------------------------------
+--Inst_my_module: my_module 
+--Generic map (
+--        g_component_depth_bram        => g_depth_bram,        
+--        g_component_width_addr_bram   => g_width_addr_bram
+--    )
+--PORT MAP(. . .);
+-- ============================ топ модуль конец ============================
+
+
+-- ============================ описание модуля my_module ============================
+--entity my_module is
+
+    --Generic( 		
+        --constant g_component_depth_bram         : integer   := 4094; 
+        --constant g_component_width_addr_bram    : integer   := 12   
+   --);
+    --Port (. . .);  
+-- ============================ описание модуля my_module  конец ============================
+-- ***************************************************************************           
+$0
+]]></content>
+	<tabTrigger>generichelp</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <tabTrigger>procclk</tabTrigger>
+  <scope>source.vhdl</scope>
+  <content><![CDATA[
+${DATAINPORTS}
+
+${OUTPORTS}
+]]></content>
+  <description>process clk</description>
+</snippet>

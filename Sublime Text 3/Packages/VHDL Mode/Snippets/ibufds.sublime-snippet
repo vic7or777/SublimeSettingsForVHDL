@@ -1,0 +1,28 @@
+<snippet>
+	<description>ibufds</description>
+	<content><![CDATA[
+${1:Inst_ibufds} : IBUFDS
+	port map (
+		I  => ${2:data_in}p(${4:0}),
+		IB => ${2}n(${4}),
+		O  => ${3:s_data_in}(${4})
+	); 
+
+--gen_data: for i in 0 to 15 generate
+
+--  ibufds_inst : ibufds
+--  generic map (
+--    IOSTANDARD => "LVDS_25",
+--    DIFF_TERM  => TRUE
+--  )
+--  port map (
+--    i  => data_p(i),
+--    ib => data_n(i),
+--    o  => data_net(i)
+--  );   
+--end generate;	             
+$0
+]]></content>
+	<tabTrigger>ibufds</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

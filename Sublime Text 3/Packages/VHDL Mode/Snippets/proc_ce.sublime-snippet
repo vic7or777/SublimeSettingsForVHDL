@@ -1,0 +1,18 @@
+<snippet>
+  <description>process clk ce rst</description>
+	<content><![CDATA[
+${1:<PROCESS_NAME>} : Process(${2:clk}, ${3:ce}, ${4:rst}, ${5:data_in}) 
+begin
+  if($2'event and $2 = '1') then
+    if($4 = '${6:1}') then    
+  
+    elsif ($3 = '1') then
+        $0
+    end if; -- $4
+  end if;--$2
+end process $1;
+${ENAME}
+]]></content>
+	<tabTrigger>procce</tabTrigger>
+	<scope>source.vhdl</scope>	
+</snippet>

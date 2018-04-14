@@ -1,0 +1,14 @@
+<snippet>
+	<description>obufds</description>
+	<content><![CDATA[
+${1:Inst_obufds} : OBUFDS
+	port map (
+		I  => ${2:s_data},
+		O  => ${3:data_out}p,
+		OB => ${3}n
+	);             
+$0
+]]></content>
+	<tabTrigger>obufds</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

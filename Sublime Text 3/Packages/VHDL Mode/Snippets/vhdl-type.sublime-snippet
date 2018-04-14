@@ -1,0 +1,20 @@
+<snippet>
+	<description>type array</description>
+    <content><![CDATA[
+type ${1:mas} is array(integer range<>) of std_logic_vector(${2:31} downto 0);
+signal ${3:komanda} : $1 (0 to ${4:3}):=((others=>(others=>'0')));
+--signal $3 : $1 (0 to $4):=(    
+--   (others=>'0'), 
+--   "00001000000000001000000111110001",
+-- 	 B"0000_1000_0000_0000_1000_0001_1111_0001",
+--   x"080081F1"
+--);
+--
+-- reference help:    s_data <= komanda(count_words)(count_bits);
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>type</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.vhdl</scope>
+</snippet>

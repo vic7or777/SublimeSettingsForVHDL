@@ -1,0 +1,9 @@
+<snippet>
+	<description>std_logic_vector</description>
+	<content><![CDATA[
+std_logic_vector(${1:15} downto 0);
+$0
+]]></content>
+	<tabTrigger>std_logic_vector</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

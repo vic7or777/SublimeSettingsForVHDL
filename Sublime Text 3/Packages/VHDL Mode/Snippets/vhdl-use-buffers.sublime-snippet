@@ -1,0 +1,10 @@
+<snippet>
+	<description>use for buffers library</description>
+	<content><![CDATA[
+library UNISIM;
+use UNISIM.Vcomponents.ALL;
+$0
+]]></content>
+	<tabTrigger>usebuf</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

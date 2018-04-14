@@ -1,0 +1,13 @@
+<snippet>
+	<description>bufg</description>
+	<content><![CDATA[
+${1:Inst_bufg} : BUFG
+	port map (    
+		I => ${2:clk_in},    	
+        O => ${3:s_clk}
+    );             
+$0
+]]></content>
+	<tabTrigger>bufg</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

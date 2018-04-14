@@ -1,0 +1,10 @@
+<snippet>
+	<description>use library</description>
+	<content><![CDATA[
+use IEEE.STD_LOGIC_arith.ALL;    -- conv_std_logic_vector(data_in, bits_width)
+use IEEE.STD_LOGIC_unsigned.ALL; -- count + /-
+$0
+]]></content>
+	<tabTrigger>use</tabTrigger>
+	<scope>source.vhdl</scope>
+</snippet>

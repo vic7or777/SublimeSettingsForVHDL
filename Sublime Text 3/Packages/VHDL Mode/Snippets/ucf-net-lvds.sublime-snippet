@@ -1,0 +1,12 @@
+<snippet>
+	<description>net lvds</description>
+	<content><![CDATA[
+NET "${1:adc_a[0]}p" LOC = ${2:H22};
+NET "${1}p" IOSTANDARD = LVDS;
+NET "${1}p" DIFF_TERM = "TRUE"; # True => R = 100 Om
+NET "${1}n" DIFF_TERM = "TRUE";
+$0
+]]></content>
+	<tabTrigger>netlvds</tabTrigger>	
+	<scope>source.tcl</scope>
+</snippet>
